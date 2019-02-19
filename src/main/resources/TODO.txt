@@ -1,0 +1,11 @@
+TODO 13 -> do over
+
+15 -> dijkstra/optimizations
+
+-> binary search (parallel) for part2
+
+
+day22: profiling for speed
+
+19 p2 halting
+21

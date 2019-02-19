@@ -6,6 +6,7 @@ import lombok.Value;
 
 import java.util.*;
 
+import static be.tomjo.advent.util.MathUtil.manhattanDistanceToPoint;
 import static be.tomjo.advent.util.StringUtils.lines;
 import static java.lang.Integer.parseInt;
 import static java.util.Comparator.comparingInt;
@@ -117,10 +118,6 @@ public class Day6 implements Solution<Integer, Integer, Day6.Day6Input> {
             }
         }
         return indexOfCoordWithMinimalDistance;
-    }
-
-    private static int manhattanDistanceToPoint(V2 p, V2 q) {
-        return (Math.abs(p.getXAsInt() - q.getXAsInt()) + Math.abs(p.getYAsInt() - q.getYAsInt()));
     }
 
     private static List<V2> inputToCoords(String input) {

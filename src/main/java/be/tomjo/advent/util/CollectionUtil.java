@@ -2,6 +2,7 @@ package be.tomjo.advent.util;
 
 import be.tomjo.advent.day7.Edge;
 import lombok.experimental.UtilityClass;
+import org.checkerframework.checker.nullness.Opt;
 
 import java.util.*;
 import java.util.function.BinaryOperator;
@@ -13,6 +14,9 @@ import static java.util.Arrays.asList;
 @UtilityClass
 public class CollectionUtil {
 
+    public static <T> Optional<T> last(List<T> list){
+        return list == null || list.isEmpty() ? Optional.empty() : Optional.of(list.get(list.size()-1));
+    }
 
     public static <T> void rotateDeque(Deque<T> deque, int n) {
         if (n > 0) {
